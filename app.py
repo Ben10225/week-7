@@ -226,6 +226,8 @@ def get_api():
   # GET
   if request.method == "GET":
     session = request.headers.get('Cookie')
+    if not session:
+      return json.dumps({"data": None})
     params = decoded_session(session, "logout")
     if params == "als":
       return json.dumps({"data": None})
@@ -255,6 +257,8 @@ def get_api():
   # PATCH
   if request.method == "PATCH":
     session = request.headers.get('Cookie')
+    if not session:
+      return json.dumps({"data": None})
     params = decoded_session(session, "logout")
     if params == "als":
       return json.dumps({"error": True})
