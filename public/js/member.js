@@ -14,8 +14,8 @@ btnModify.addEventListener("click", ()=>{
   fetchItems("modify", 'PATCH');
 });
 
-let ct = 0
-let lst = []
+let ct = 0;
+let lst = [];
 
 function fetchItems(routeName, method){
   let msg = document.querySelector(`#${routeName}`);
@@ -81,6 +81,7 @@ function fetchItems(routeName, method){
         setTimeout(()=>{
           modifyText.style.opacity = "0";
         }, 3000)
+        
         // 更新 h2 名字
         let name = document.querySelector(".userNewName");
         name.textContent = data.newName;
@@ -96,15 +97,15 @@ function fetchItems(routeName, method){
         if(ct == 1){
           for(let i=0;i<messageName.length;i++){
             if(messageName[i].textContent == data.oldName){
-              lst.push(i)
+              lst.push(i);
               messageName[i].textContent = data.newName;
             }
-          }
+          };
         }
         if(ct > 1){
           for(let i of lst){
             messageName[i].textContent = data.newName;
-          }
+          };
         }
       }
     }

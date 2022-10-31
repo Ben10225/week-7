@@ -220,7 +220,7 @@ def modify():
   return {"routeName": "modify", "feedback": "更新成功", "newName": msg, "oldName": name}
 
 
-# get API
+# API
 @app.route("/api/member", methods=["GET", "PATCH"])
 def get_api():
   # GET
