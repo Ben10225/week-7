@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 80px;
+  background-color: rgb(40, 44, 80);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+header h2 {
+  margin: 0;
+  color: #fff;
+}
+
+section h3 {
+  margin-top: 80px;
+  font-weight: 400;
+}
+section h5 {
+  font-weight: 300;
+  font-size: 25px !important;
+}
+section a {
+  font-size: 20px;
+}
+section hr {
+  margin-bottom: 20px;
+  width: 500px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section label {
+  font-size: 24px !important;
+  letter-spacing: 3px;
+  margin-right: -20px;
+  position: relative;
+  bottom: 5px;
+  font-weight: 400;
+}
+section input {
+  margin: 0;
+  font-size: 22px !important;
+  padding: 3px 10px !important;
+}
+section .msgBoard .msg h4 {
+  display: inline-block;
+}
+section .msgBoard .msg .userName {
+  margin: 0;
+  margin-right: 3px;
+}
+section .msgBoard .msg .userMsg {
+  font-weight: 300;
+  margin: 0;
+  margin-right: 6px;
+}
+section .msgBoard .msg .userTime {
+  font-size: 15px;
+  margin-right: 30px;
+  opacity: 0.4;
+  margin: 0;
+  font-weight: 400;
+  position: relative;
+  top: 2px;
+}
+
+footer {
+  height: 50px;
+}
+
+.btn-w7 {
+  margin-left: 15px !important;
+}
+
+.modify_success {
+  opacity: 0;
+}/*# sourceMappingURL=member.css.map */

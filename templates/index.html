@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登入頁面</title>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css' integrity='sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g==' crossorigin='anonymous'/>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <h2>歡迎光臨，請註冊登入系統</h2>
+      </nav>
+    </header>
+    <section>
+      <div class="registerBox">
+        <div class="container text-center">
+          <div class="row mt-5">
+            <h3 class="title">註冊帳號</h3>
+          </div>
+        </div>
+        <form action="">
+          <div class="container">
+            <div class="form-group row d-flex justify-content-center mt-3">
+              <label for="name1" class="col-sm-1 col-form-label text-center">姓名</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="name1" name="name">
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center mt-1">
+              <label for="username1" class="col-sm-1 col-form-label text-center">帳號</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="username1" name="account">
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center mt-1">
+              <label for="password1" class="col-sm-1 col-form-label text-center">密碼</label>
+              <div class="col-sm-3">
+                <input type="password" class="form-control" id="password1" name="password">
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center mt-3">
+              <div class="col-1 text-center">
+                <button type="button" class="btn btn-outline-secondary btnRegi" onclick="signup()">註冊</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <hr>
+      <div class="signBox">
+        <div class="container text-center">
+          <div class="row mt-5">
+            <h3 class="title">登入系統</h3>
+          </div>
+        </div>
+        <form action="">
+          <div class="container">
+            <div class="form-group row d-flex justify-content-center mt-3">
+              <label for="username2" class="col-sm-1 col-form-label text-center">帳號</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="username2" name="account">
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center mt-1">
+              <label for="password2" class="col-sm-1 col-form-label text-center">密碼</label>
+              <div class="col-sm-3">
+                <input type="password" class="form-control" id="password2" name="password">
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center mt-3">
+              <div class="col-1 text-center">
+                <button type="button" class="btn btn-outline-secondary" onclick="signin()">登入</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js' integrity='sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==' crossorigin='anonymous'></script>
+  <script src="/js/index.js"></script>
+</body>
+</html>
