@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, session
+from flask import Flask, render_template, redirect, request, session , jsonify 
 from mysql.connector import pooling
 from mysql_pwd import sqlPwd
 import json
@@ -227,10 +227,10 @@ def get_api():
   if request.method == "GET":
     session = request.headers.get('Cookie')
     if not session:
-      return json.dumps({"data": None})
+      return jsonify({"data": None})
     params = decoded_session(session, "logout")
     if params == "als":
-      return json.dumps({"data": None})
+      return jsonify({"data": None})
 
     username = request.args.get("username", "")
     db = connectPool()
@@ -252,16 +252,16 @@ def get_api():
       result = {
         "data": None,
       }
-    return json.dumps(result)
+    return jsonify(result)
   
   # PATCH
   if request.method == "PATCH":
     session = request.headers.get('Cookie')
     if not session:
-      return json.dumps({"data": None})
+      return jsonify({"data": None})
     params = decoded_session(session, "logout")
     if params == "als":
-      return json.dumps({"error": True})
+      return jsonify({"error": True})
 
     uid = decoded_session(session, "login")
 
@@ -287,7 +287,7 @@ def get_api():
     mycursor.close()
     db.close()
 
-    return json.dumps(result)
+    return jsonify(result)
 
 
 
