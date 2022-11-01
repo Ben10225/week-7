@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, session , jsonify 
+from flask import Flask, render_template, redirect, request, session, jsonify 
 from mysql.connector import pooling
 from mysql_pwd import sqlPwd
 import json
@@ -209,6 +209,8 @@ def modify():
   name = mycursor.fetchone()["name"]
 
   if name == msg:
+    mycursor.close()
+    db.close()
     return {"routeName": "modify", "feedback": "更新名字請與原本不同"}
 
   val = (msg, uid)
