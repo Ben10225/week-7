@@ -43,7 +43,7 @@ def decoded_session(session, status):
   if status == "logout":
     msg = msg[1:-2]
   if status == "login":
-    msg = msg[:1]
+    msg = msg[:-1]
   return msg
 
 
